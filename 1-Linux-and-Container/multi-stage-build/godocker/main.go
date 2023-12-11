@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 )
@@ -17,8 +16,7 @@ func main() {
 	mux.HandleFunc("/time", getTime)
 
 	// starting server
-	fmt.Println("Server is running at 127.0.0.1:8080")
-	log.Fatal(http.ListenAndServe( "localhost:8080", mux))
+	log.Fatal(http.ListenAndServe( "0.0.0.0:3000", mux))
 }
 
 func getTime(w http.ResponseWriter, r *http.Request) {
