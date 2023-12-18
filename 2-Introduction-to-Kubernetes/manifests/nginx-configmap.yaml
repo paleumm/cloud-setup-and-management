@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-m1
+data:
+  index.html: |
+    <HTML>
+    <HEAD><TITLE>K8s nginx Machine 1</TITLE></HEAD>
+    <BODY>
+    <H1>Welcome to machine 1</H1>
+    </BODY></HTML
